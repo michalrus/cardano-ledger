@@ -482,7 +482,7 @@ instance Arbitrary PoolParams where
       <*> arbitrary
 
 instance Arbitrary PoolMetadata where
-  arbitrary = PoolMetadata <$> arbitrary <*> arbitrary
+  arbitrary = PoolMetadata <$> arbitrary <*> genByteString 32
 
 instance Arbitrary StakePoolRelay where
   arbitrary = genericArbitraryU
